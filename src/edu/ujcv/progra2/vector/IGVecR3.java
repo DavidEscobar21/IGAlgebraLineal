@@ -1,10 +1,13 @@
 package edu.ujcv.progra2.vector;
 
 public class IGVecR3 {
-
+    private double x;
+    private double y;
+    private double z;
 
     public IGVecR3 suma(IGVecR3 b){
         //TODO: implementar
+
         return new IGVecR3();
     }
 
@@ -44,5 +47,26 @@ public class IGVecR3 {
 
     public double magnitud(){
         return Math.sqrt(productoPunto(this));
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+    public double getZ() {
+        return z;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
     }
 }
