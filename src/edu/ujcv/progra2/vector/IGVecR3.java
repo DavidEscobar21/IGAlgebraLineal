@@ -33,9 +33,9 @@ public class IGVecR3 {
 
     public IGVecR3 resta(IGVecR3 b){
         IGVecR3 a1 = new IGVecR3();
-        a1.x = x - b.x;
-        a1.y = y - b.y;
-        a1.z = z - b.z;
+        a1.x = x - (b.x);
+        a1.y = y - (b.y);
+        a1.z = z - (b.z);
         return a1;
         //TODO: implementar
 
@@ -70,8 +70,13 @@ public class IGVecR3 {
         return 0.0;
     }
 
-    public double magnitud(){
-        return Math.sqrt(productoPunto(this));
+    public double magnitud(IGVecR3 b){
+        IGVecR3 a1 = new IGVecR3();
+        a1.x = (b.x) - x;
+        a1.y = (b.y) - y;
+        a1.z = (b.z) - z;
+        double a = Math.pow(a1.x, 2) + Math.pow(a1.y,2) + Math.pow(a1.z,2);
+        return Math.sqrt(a);
     }
 
     public double getX() {

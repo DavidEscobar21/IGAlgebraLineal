@@ -37,10 +37,10 @@ public class IGVecR4 {
 
     public IGVecR4 resta(IGVecR4 b){
         IGVecR4 a1 = new IGVecR4();
-        a1.x = x - b.x;
-        a1.y = y - b.y;
-        a1.z = z - b.z;
-        a1.w = w - b.w;
+        a1.x = x - (b.x);
+        a1.y = y - (b.y);
+        a1.z = z - (b.z);
+        a1.w = w - (b.w);
         return a1;
         //TODO: implementar
 
@@ -74,8 +74,14 @@ public class IGVecR4 {
         return 0.0;
     }
 
-    public double magnitud(){
-        return Math.sqrt(productoPunto(this));
+    public double magnitud(IGVecR4 b){
+        IGVecR4 a1 = new IGVecR4();
+        a1.x = (b.x) - x;
+        a1.y = (b.y) - y;
+        a1.z = (b.z) - z;
+        a1.w = (b.w) - w;
+        double a = Math.pow(a1.x, 2) + Math.pow(a1.y,2) + Math.pow(a1.z,2) + Math.pow(a1.w,2);
+        return Math.sqrt(a);
     }
     public double getX() {
         return x;

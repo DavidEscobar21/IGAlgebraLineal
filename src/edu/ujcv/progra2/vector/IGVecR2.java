@@ -78,8 +78,13 @@ public IGVecR2(double x, double y){
         return 0.0;
     }
 
-    public double magnitud(){
-        return Math.sqrt(productoPunto(this));
+    public double magnitud(IGVecR2 b){
+        IGVecR2 a1 = new IGVecR2();
+        a1.x = (b.x) - x;
+        a1.y = (b.y) - y;
+        double a = Math.pow(a1.x, 2) + Math.pow(a1.y,2);
+        return Math.sqrt(a);
+
     }
 
     public double getX() {
