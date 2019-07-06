@@ -53,8 +53,15 @@ public class IGVecR4 {
     }
 
     public double productoPunto(IGVecR4 b){
+        IGVecR4 a1 = new IGVecR4();
+        a1.x = x * b.x;
+        a1.y = y * b.y;
+        a1.z = z * b.z;
+        a1.w = w * b.w;
+        double a = a1.x + a1.y + a1.z + a1.w;
+        return a;
         //TODO: implementar
-        return 0.0;
+
     }
 
 

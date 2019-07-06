@@ -49,7 +49,12 @@ public class IGVecR3 {
 
     public double productoPunto(IGVecR3 b){
         //TODO: implementar
-        return 0.0;
+        IGVecR3 a1 = new IGVecR3();
+        a1.x = x * b.x;
+        a1.y = y * b.y;
+        a1.z = z * b.z;
+        double a = a1.x + a1.y + a1.z ;
+        return a;
     }
 
 

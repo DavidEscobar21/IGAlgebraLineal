@@ -57,8 +57,13 @@ public IGVecR2(double x, double y){
     }
 
     public double productoPunto(IGVecR2 b){
+        IGVecR2 a1 = new IGVecR2();
+        a1.x = x * b.x;
+        a1.y = y * b.y;
+        double a = a1.x + a1.y;
+        return a;
         //TODO: implementar
-        return 0.0;
+        
     }
 
 
