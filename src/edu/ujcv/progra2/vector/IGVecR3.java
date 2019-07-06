@@ -13,6 +13,7 @@ public class IGVecR3 {
     public IGVecR3(double x, double y, double z){
         this.x = x;
         this.y = y;
+        this.z = z;
     }
     public IGVecR3(IGVecR3 b){
         this.x = b.x;

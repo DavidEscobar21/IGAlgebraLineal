@@ -5,7 +5,25 @@ public class IGVecR4 {
     private double y;
     private double z;
     private double w;
-    
+
+    public IGVecR4(){
+        this.x = 0;
+        this.y = 0;
+        this.z = 0;
+        this.z = 0;
+    }
+    public IGVecR4(double x, double y, double z, double w){
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.w = w;
+    }
+    public IGVecR4(IGVecR4 b){
+        this.x = b.x;
+        this.y = b.y;
+        this.z = b.z;
+        this.w = b.w;
+    }
     public IGVecR4 suma(IGVecR4 b){
         //TODO: implementar
         return new IGVecR4();
