@@ -63,7 +63,7 @@ public IGVecR2(double x, double y){
         double a = a1.x + a1.y;
         return a;
         //TODO: implementar
-        
+
     }
 
 
@@ -79,8 +79,15 @@ public IGVecR2(double x, double y){
     }
 
     public double angulo(IGVecR2 b){
+        IGVecR2 a1 = new IGVecR2();
+        a1.x = x * b.x;
+        a1.y = y * b.y;
+        double a = a1.x + a1.y;
+        double c = Math.sqrt(((Math.pow(b.x,2)+Math.pow(b.y,2))));
+        double f = Math.sqrt(((Math.pow(x,2)+Math.pow(y,2))));
+        double d = Math.acos((a/(c*f)));
         //TODO: implementar
-        return 0.0;
+        return d;
     }
 
     public double magnitud(IGVecR2 b){

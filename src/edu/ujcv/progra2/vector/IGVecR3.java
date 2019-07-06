@@ -71,8 +71,16 @@ public class IGVecR3 {
     }
 
     public double angulo(IGVecR3 b){
+        IGVecR3 a1 = new IGVecR3();
+        a1.x = x * b.x;
+        a1.y = y * b.y;
+        a1.z = z * b.z;
+        double a = a1.x + a1.y + a1.z ;
+        double c = Math.sqrt(((Math.pow(b.x,2)+Math.pow(b.y,2)+Math.pow(b.z,2))));
+        double f = Math.sqrt(((Math.pow(x,2)+Math.pow(y,2)+Math.pow(z,2))));
+        double d = Math.acos((a/(c*f)));
         //TODO: implementar
-        return 0.0;
+        return d;
     }
 
     public double magnitud(IGVecR3 b){
