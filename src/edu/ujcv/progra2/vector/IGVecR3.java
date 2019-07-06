@@ -22,14 +22,23 @@ public class IGVecR3 {
     }
 
     public IGVecR3 suma(IGVecR3 b){
+        IGVecR3 a1 = new IGVecR3();
+        a1.x = x + b.x;
+        a1.y = y + b.y;
+        a1.z = z + b.z;
+        return a1;
         //TODO: implementar
 
-        return new IGVecR3();
     }
 
     public IGVecR3 resta(IGVecR3 b){
+        IGVecR3 a1 = new IGVecR3();
+        a1.x = x - b.x;
+        a1.y = y - b.y;
+        a1.z = z - b.z;
+        return a1;
         //TODO: implementar
-        return new IGVecR3();
+
     }
 
     //producto.
