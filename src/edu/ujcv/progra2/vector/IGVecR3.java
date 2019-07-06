@@ -5,6 +5,21 @@ public class IGVecR3 {
     private double y;
     private double z;
 
+    public IGVecR3(){
+        this.x = 0;
+        this.y = 0;
+        this.z = 0;
+    }
+    public IGVecR3(double x, double y, double z){
+        this.x = x;
+        this.y = y;
+    }
+    public IGVecR3(IGVecR3 b){
+        this.x = b.x;
+        this.y = b.y;
+        this.z = b.z;
+    }
+
     public IGVecR3 suma(IGVecR3 b){
         //TODO: implementar
 
