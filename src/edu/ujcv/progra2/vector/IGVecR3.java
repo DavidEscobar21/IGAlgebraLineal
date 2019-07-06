@@ -60,8 +60,11 @@ public class IGVecR3 {
 
 
     public IGVecR3 productoCruz(IGVecR3 b){
-
-        return new IGVecR3();
+        IGVecR3 a1 = new IGVecR3();
+        a1.x = (b.z*y)-(b.y*z);
+        a1.y = (b.x*z)-(b.z*x);
+        a1.z = (b.y*x)-(b.x*y);
+        return a1;
     }
 
 
