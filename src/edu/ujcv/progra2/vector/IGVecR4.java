@@ -25,13 +25,25 @@ public class IGVecR4 {
         this.w = b.w;
     }
     public IGVecR4 suma(IGVecR4 b){
+        IGVecR4 a1 = new IGVecR4();
+        a1.x = x + b.x;
+        a1.y = y + b.y;
+        a1.z = z + b.z;
+        a1.w = w + b.w;
+        return a1;
         //TODO: implementar
-        return new IGVecR4();
+
     }
 
     public IGVecR4 resta(IGVecR4 b){
+        IGVecR4 a1 = new IGVecR4();
+        a1.x = x - b.x;
+        a1.y = y - b.y;
+        a1.z = z - b.z;
+        a1.w = w - b.w;
+        return a1;
         //TODO: implementar
-        return new IGVecR4();
+
     }
 
     //producto.
