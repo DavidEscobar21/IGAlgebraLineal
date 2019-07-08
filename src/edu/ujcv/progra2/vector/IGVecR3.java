@@ -43,9 +43,12 @@ public class IGVecR3 {
 
     //producto.
     public  IGVecR3 escalarPorVector(double alpha){
-        //TODO: implementar
-        return new IGVecR3();
-    }
+        IGVecR3 a1 = new IGVecR3();
+        a1.x = alpha * x;
+        a1.y = alpha * y;
+        a1.z = alpha * z;
+        return a1;
+        }
 
     public double productoPunto(IGVecR3 b){
         //TODO: implementar
@@ -65,12 +68,6 @@ public class IGVecR3 {
         a1.y = (b.x*z)-(b.z*x);
         a1.z = (b.y*x)-(b.x*y);
         return a1;
-    }
-
-
-    public double determinante(){
-        //TODO: implementar
-        return 0.0;
     }
 
     public double angulo(IGVecR3 b){

@@ -10,7 +10,7 @@ public class IGVecR4 {
         this.x = 0;
         this.y = 0;
         this.z = 0;
-        this.z = 0;
+        this.w = 0;
     }
     public IGVecR4(double x, double y, double z, double w){
         this.x = x;
@@ -48,8 +48,12 @@ public class IGVecR4 {
 
     //producto.
     public  IGVecR4 escalarPorVector(double alpha){
-        //TODO: implementar
-        return new IGVecR4();
+        IGVecR4 a1 = new IGVecR4();
+        a1.x = alpha * x;
+        a1.y = alpha * y;
+        a1.z = alpha * z;
+        a1.w = alpha * w;
+        return a1;
     }
 
     public double productoPunto(IGVecR4 b){
@@ -70,11 +74,6 @@ public class IGVecR4 {
 
     //}
 
-
-    public double determinante(){
-        //TODO: implementar
-        return 0.0;
-    }
 
     public double angulo(IGVecR4 b){
         IGVecR4 a1 = new IGVecR4();
@@ -119,6 +118,7 @@ public class IGVecR4 {
     public void setZ(double z) {
         this.z = z;
 }
+
     public double getW() {
         return w;
     }
