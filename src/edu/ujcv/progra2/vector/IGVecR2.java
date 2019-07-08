@@ -51,7 +51,9 @@ public IGVecR2(double x, double y){
 
     //producto.
     public  IGVecR2 escalarPorVector(double alpha){
-
+        IGVecR2 a1 = new IGVecR2();
+        a1.x = -1*x;
+        a1.y = -1*y;
         //TODO: implementar
         return new IGVecR2();
     }
