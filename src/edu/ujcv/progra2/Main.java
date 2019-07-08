@@ -6,7 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
         IGVecR2 igVecR2 = new IGVecR2();
-
     }
 
 }

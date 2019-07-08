@@ -17,6 +17,7 @@ public IGVecR2(double x, double y){
     this.y = b.y;
     }
 
+
     //privado los datos
     // un escalar que represente 'x' y 'y' los componentes del vector
 
@@ -52,10 +53,10 @@ public IGVecR2(double x, double y){
     //producto.
     public  IGVecR2 escalarPorVector(double alpha){
         IGVecR2 a1 = new IGVecR2();
-        a1.x = -1*x;
-        a1.y = -1*y;
+        a1.x = alpha * x;
+        a1.y = alpha *y;
         //TODO: implementar
-        return new IGVecR2();
+        return a1;
     }
 
     public double productoPunto(IGVecR2 b){
@@ -69,16 +70,6 @@ public IGVecR2(double x, double y){
     }
 
 
-    // no esta definido en R2.!!!!!
-    //public IGVecR2 productoCruz(IGVecR2 b){
-
-    //}
-
-
-    public double determinante(){
-        //TODO: implementar
-        return 0.0;
-    }
 
     public double angulo(IGVecR2 b){
         IGVecR2 a1 = new IGVecR2();
@@ -87,7 +78,7 @@ public IGVecR2(double x, double y){
         double a = a1.x + a1.y;
         double c = Math.sqrt(((Math.pow(b.x,2)+Math.pow(b.y,2))));
         double f = Math.sqrt(((Math.pow(x,2)+Math.pow(y,2))));
-        double d = Math.acos((a/(c*f)));
+        double d = Math.toDegrees(Math.acos((a/(c*f))));
         //TODO: implementar
         return d;
     }
