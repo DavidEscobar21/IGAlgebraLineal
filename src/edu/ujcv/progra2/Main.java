@@ -27,6 +27,20 @@ public class Main {
                                     System.out.println("ingrese la oprecion que desea realizar");
                                     System.out.println("1. Suma\n2. Resta\n3. Escalar * Vector\n4. Producto punto\n5. Angulo\n6. Magnitud\n7. Regresar");
                                     y = sc.nextInt();
+                                    switch (y){
+                                        case 1:
+                                            break;
+                                        case 2:
+                                            break;
+                                        case 3:
+                                            break;
+                                        case 4:
+                                            break;
+                                        case 5:
+                                            break;
+                                        case 6:
+                                            break;
+                                    }
                                 }while (y!=7);
                                 break;
                             case 2:
@@ -34,6 +48,22 @@ public class Main {
                                     System.out.println("ingrese la oprecion que desea realizar");
                                     System.out.println("1. Suma\n2. Resta\n3. Escalar * Vector\n4. Producto punto\n5. Angulo\n6. Magnitud\n7. Producto cruz\n8. Regresar");
                                     y = sc.nextInt();
+                                    switch (y){
+                                        case 1:
+                                            break;
+                                        case 2:
+                                            break;
+                                        case 3:
+                                            break;
+                                        case 4:
+                                            break;
+                                        case 5:
+                                            break;
+                                        case 6:
+                                            break;
+                                        case 7:
+                                            break;
+                                    }
                                 }while (y!=8);
                                 break;
                             case 3:
@@ -41,6 +71,20 @@ public class Main {
                                     System.out.println("ingrese la oprecion que desea realizar");
                                     System.out.println("1. Suma\n2. Resta\n3. Escalar * Vector\n4. Producto punto\n5. Angulo\n6. Magnitud\n7. Regresar");
                                     y = sc.nextInt();
+                                    switch (y){
+                                        case 1:
+                                            break;
+                                        case 2:
+                                            break;
+                                        case 3:
+                                            break;
+                                        case 4:
+                                            break;
+                                        case 5:
+                                            break;
+                                        case 6:
+                                            break;
+                                    }
                                 }while (y!=7);
                                 break;
                         }
@@ -59,6 +103,18 @@ public class Main {
                                     System.out.println("ingrese la oprecion que desea realizar");
                                     System.out.println("1. Multiplicacion\n2. Columna * Matriz\n3. Suma\n4. Escalar * Matriz\n5. Rotacion\n6. Regresar");
                                     y = sc.nextInt();
+                                    switch (y){
+                                        case 1:
+                                            break;
+                                        case 2:
+                                            break;
+                                        case 3:
+                                            break;
+                                        case 4:
+                                            break;
+                                        case 5:
+                                            break;
+                                    }
                                 } while (y != 6);
                                 break;
                             case 2:
@@ -66,12 +122,30 @@ public class Main {
                                     System.out.println("ingrese la oprecion que desea realizar");
                                     System.out.println("\n1. Rotacion en X\n2. Rotacion en Y\n3. Rotacion en Z\n4. Regresar");
                                     y = sc.nextInt();
+                                    switch (y){
+                                        case 1:
+                                            break;
+                                        case 2:
+                                            break;
+                                        case 3:
+                                            break;
+                                    }
                                 } while (y != 4);
                                 break;
                             case 3:do {
                                 System.out.println("ingrese la oprecion que desea realizar");
                                 System.out.println("\n1. Rotacion en X\n2. Rotacion en Y\n3. Rotacion en Z\n4. Rotacion en W\n5. Regresar");
                                 y = sc.nextInt();
+                                switch (y){
+                                    case 1:
+                                        break;
+                                    case 2:
+                                        break;
+                                    case 3:
+                                        break;
+                                    case 4:
+                                        break;
+                                }
                             }while (y!=5);
                                 break;
                         }
