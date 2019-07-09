@@ -4,6 +4,8 @@ import edu.ujcv.progra2.vector.IGVecR3;
 
 public class IGMatR3 {
 
+
+
     private IGVecR3 colX;
     private IGVecR3 colY;
     private IGVecR3 colZ;
@@ -26,9 +28,13 @@ public class IGMatR3 {
         this.colX = new IGVecR3(b.colX);
         this.colY = new IGVecR3(b.colY);
         this.colZ = new IGVecR3(b.colZ);}
-    // public static IGVecR2 rotacionZ (double angulo, IGVecR2 vector){
-//
-//    }
+
+
+     public static IGVecR3 rotacionZ (double angulo, IGVecR3 vector){
+         IGVecR3 retval = new IGVecR3();
+
+         return retval;
+    }
 
     // public static IGVecR2 rotacionX (double angulo, IGVecR2 vector){
 //
@@ -38,4 +44,25 @@ public class IGMatR3 {
 //
 //    }
 
+    public IGVecR3 getColX() {
+        return colX;
+    }
+
+    public void setColX(IGVecR3 colX) {
+        this.colX = colX;
+    }
+    public IGVecR3 getColY() {
+        return colY;
+    }
+
+    public void setColY(IGVecR3 colY) {
+        this.colY = colY;
+    }
+    public IGVecR3 getColZ() {
+        return colZ;
+    }
+
+    public void setColZ(IGVecR3 colZ) {
+        this.colZ = colZ;
+    }
 }
