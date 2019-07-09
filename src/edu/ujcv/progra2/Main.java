@@ -1,5 +1,8 @@
 package edu.ujcv.progra2;
 
+import edu.ujcv.progra2.vector.IGVecR2;
+import edu.ujcv.progra2.vector.IGVecR3;
+
 import java.util.Scanner;
 
 public class Main {
@@ -29,16 +32,74 @@ public class Main {
                                     y = sc.nextInt();
                                     switch (y){
                                         case 1:
+                                            IGVecR2 a = new IGVecR2();
+                                            System.out.println("Ingrese X1 y Y1");
+                                            a.setX(sc.nextDouble());
+                                            a.setY(sc.nextDouble());
+                                            IGVecR2 b = new IGVecR2();
+                                            System.out.println("Ingrese X2 y Y2");
+                                            b.setX(sc.nextDouble());
+                                            b.setY(sc.nextDouble());
+                                            IGVecR2 resul = a.suma(b);
+                                            System.out.println("El resultado es: ("+resul.getX()+", "+resul.getY()+")\n");
                                             break;
                                         case 2:
+                                            a = new IGVecR2();
+                                            System.out.println("Ingrese X1 y Y1");
+                                            a.setX(sc.nextDouble());
+                                            a.setY(sc.nextDouble());
+                                            b = new IGVecR2();
+                                            System.out.println("Ingrese X2 y Y2");
+                                            b.setX(sc.nextDouble());
+                                            b.setY(sc.nextDouble());
+                                            resul = a.resta(b);
+                                            System.out.println("El resultado es: ("+resul.getX()+", "+resul.getY()+")\n");
                                             break;
                                         case 3:
+                                            a = new IGVecR2();
+                                            System.out.println("Ingrese X1 y Y1");
+                                            a.setX(sc.nextDouble());
+                                            a.setY(sc.nextDouble());
+                                            System.out.println("ingrese Alpha");
+                                            double alpha = sc.nextDouble();
+                                            resul = a.escalarPorVector(alpha);
+                                            System.out.println("El resultado es: ("+resul.getX()+", "+resul.getY()+")\n");
                                             break;
                                         case 4:
+                                            a = new IGVecR2();
+                                            System.out.println("Ingrese X1 y Y1");
+                                            a.setX(sc.nextDouble());
+                                            a.setY(sc.nextDouble());
+                                            b = new IGVecR2();
+                                            System.out.println("Ingrese X2 y Y2");
+                                            b.setX(sc.nextDouble());
+                                            b.setY(sc.nextDouble());
+                                            double t = a.productoPunto(b);
+                                            System.out.println("El resultado es: "+t);
                                             break;
                                         case 5:
+                                            a = new IGVecR2();
+                                            System.out.println("Ingrese X1 y Y1");
+                                            a.setX(sc.nextDouble());
+                                            a.setY(sc.nextDouble());
+                                            b = new IGVecR2();
+                                            System.out.println("Ingrese X2 y Y2");
+                                            b.setX(sc.nextDouble());
+                                            b.setY(sc.nextDouble());
+                                            t = a.angulo(b);
+                                            System.out.println("El resultado es: "+t+" grados");
                                             break;
                                         case 6:
+                                            a = new IGVecR2();
+                                            System.out.println("Ingrese X1 y Y1");
+                                            a.setX(sc.nextDouble());
+                                            a.setY(sc.nextDouble());
+                                            b = new IGVecR2();
+                                            System.out.println("Ingrese X2 y Y2");
+                                            b.setX(sc.nextDouble());
+                                            b.setY(sc.nextDouble());
+                                            t = a.magnitud(b);
+                                            System.out.println("El resultado es: "+t);
                                             break;
                                     }
                                 }while (y!=7);
@@ -50,8 +111,32 @@ public class Main {
                                     y = sc.nextInt();
                                     switch (y){
                                         case 1:
+                                            IGVecR3 a = new IGVecR3();
+                                            System.out.println("Ingrese X1, Y1 y Z1");
+                                            a.setX(sc.nextDouble());
+                                            a.setY(sc.nextDouble());
+                                            a.setZ(sc.nextDouble());
+                                            IGVecR3 b = new IGVecR3();
+                                            System.out.println("Ingrese X2, Y2 y Z2");
+                                            b.setX(sc.nextDouble());
+                                            b.setY(sc.nextDouble());
+                                            b.setZ(sc.nextDouble());
+                                            IGVecR3 resul = a.suma(b);
+                                            System.out.println("El resultado es: ("+resul.getX()+", "+resul.getY()+", "+resul.getZ()+")");
                                             break;
                                         case 2:
+                                            a = new IGVecR3();
+                                            System.out.println("Ingrese X1, Y1 y Z1");
+                                            a.setX(sc.nextDouble());
+                                            a.setY(sc.nextDouble());
+                                            a.setZ(sc.nextDouble());
+                                            b = new IGVecR3();
+                                            System.out.println("Ingrese X2, Y2 y Z2");
+                                            b.setX(sc.nextDouble());
+                                            b.setY(sc.nextDouble());
+                                            b.setZ(sc.nextDouble());
+                                            resul = a.resta(b);
+                                            System.out.println("El resultado es: ("+resul.getX()+", "+resul.getY()+", "+resul.getZ()+")");
                                             break;
                                         case 3:
                                             break;

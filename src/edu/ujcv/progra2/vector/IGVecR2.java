@@ -67,14 +67,6 @@ public IGVecR2(double x, double y){
 
     }
 
-
-    // no esta definido en R2.!!!!!
-    //public IGVecR2 productoCruz(IGVecR2 b){
-
-    //}
-
-
-
     public double angulo(IGVecR2 b){
         IGVecR2 a1 = new IGVecR2();
         a1.x = x * b.x;
