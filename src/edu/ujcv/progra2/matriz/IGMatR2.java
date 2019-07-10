@@ -9,7 +9,6 @@ public class IGMatR2 {
     private IGVecR2 colY;
 
 
-
     public IGMatR2(){
 	        colX = new IGVecR2(1,0);
 	        colY = new IGVecR2(0,1);
@@ -36,14 +35,14 @@ public class IGMatR2 {
     public IGVecR2 colXMat(IGVecR2 fila){
 	        IGVecR2 retval = new IGVecR2();
  	        retval.setX(fila.productoPunto(this.getFilaX()));
-        retval.setY(fila.productoPunto(this.getFilaY()));
+            retval.setY(fila.productoPunto(this.getFilaY()));
         return retval;
     }
 
     public IGMatR2 suma (IGMatR2 b){
 	        IGMatR2 retval = new IGMatR2();
 	        retval.setColX(this.colX.suma(b.colX));
-        retval.setColY(this.colY.suma(b.colY));
+            retval.setColY(this.colY.suma(b.colY));
         return retval;}
 
     public IGMatR2 escalarXmat(double escalar){
@@ -54,9 +53,12 @@ public class IGMatR2 {
         retval.colY.setY(this.colY.getY() * escalar);
         return retval;
     }
-    public static IGVecR2 rotacion (double angulo, IGVecR2 vector){
+    public IGVecR2 rotacion (double angulo, IGVecR2 fila){
+        IGVecR2 retval = new IGVecR2();
+        retval.setX(fila.productoPunto(this.getFilaX()));
+        retval.setY(fila.productoPunto(this.getFilaY()));
+        return retval;
     //todo: por hacer
-    return new IGVecR2();
     }
 
     public IGVecR2 getColX() {
@@ -81,6 +83,7 @@ public class IGMatR2 {
     public IGVecR2 getFilaY(){
         return new IGVecR2(colX.getY(),colY.getY());
     }
+
     //double x1,y1;
     //double x2,y2;
 
