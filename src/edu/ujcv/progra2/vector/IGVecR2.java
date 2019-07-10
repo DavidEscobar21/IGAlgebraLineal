@@ -66,7 +66,6 @@ public IGVecR2(double x, double y){
         //TODO: implementar
 
     }
-
     public double angulo(IGVecR2 b){
         IGVecR2 a1 = new IGVecR2();
         a1.x = x * b.x;

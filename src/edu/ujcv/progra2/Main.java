@@ -329,23 +329,58 @@ public class Main {
                                     y = sc.nextInt();
                                     switch (y){
                                         case 1:
+                                            System.out.println("| X  Y |");
+                                            System.out.println("| Z  W |");
+                                            System.out.println("Ingrese X, Y, Z y W");
+                                            IGVecR2 a = new IGVecR2();
+                                            a.setX(sc.nextDouble());
+                                            a.setY(sc.nextDouble());
+                                            IGVecR2 b = new IGVecR2();
+                                            b.setX(sc.nextDouble());
+                                            b.setY(sc.nextDouble());
+                                            System.out.println("| X  Y |");
+                                            System.out.println("| Z  W |");
+                                            System.out.println("Ingrese X, Y, Z y W");
+                                            IGVecR2 c = new IGVecR2();
+                                            c.setX(sc.nextDouble());
+                                            IGVecR2 d = new IGVecR2();
+                                            d.setX(sc.nextDouble());
+                                            c.setY(sc.nextDouble());
+                                            d.setY(sc.nextDouble());
+                                            double t = a.productoPunto(c);
+                                            double o = a.productoPunto(d);
+                                            double e = b.productoPunto(c);
+                                            double v = b.productoPunto(d);
+                                            System.out.println( "|"+t+" "+o+"|");
+                                            System.out.println( "|"+e+" "+v+"|");
+
                                             break;
                                         case 2:
                                             break;
                                         case 3:
+                                            IGVecR4 p = new IGVecR4();
+                                            IGVecR4 q = new IGVecR4();
+                                            System.out.println("| X  Y |");
+                                            System.out.println("| Z  W |");
+                                            System.out.println("Ingrese X, Y, Z y W");
+                                            p.setX(sc.nextDouble());
+                                            p.setY(sc.nextDouble());
+                                            p.setZ(sc.nextDouble());
+                                            p.setW(sc.nextDouble());
+                                            System.out.println("| X  Y |");
+                                            System.out.println("| Z  W |");
+                                            System.out.println("Ingrese X, Y, Z y W");
+                                            q.setX(sc.nextDouble());
+                                            q.setY(sc.nextDouble());
+                                            q.setZ(sc.nextDouble());
+                                            q.setW(sc.nextDouble());
+                                            IGVecR4 resul = p.suma(q);
+                                            System.out.println( "|"+resul.getX()+" "+resul.getY()+"|");
+                                            System.out.println( "|"+resul.getZ()+" "+resul.getW()+"|");
                                             break;
                                         case 4:
                                             break;
                                         case 5:
-                                            IGVecR2 a = new IGVecR2();
-                                            IGVecR2 b = new IGVecR2();
-                                            System.out.println("Ingrese el angulo");
-                                            double angulo = sc.nextDouble();
-                                            System.out.println("Ingrese el vector X y Y");
-                                            a.setX(sc.nextDouble());
-                                            a.setY(sc.nextDouble());
-                                            IGMatR2 c = new IGMatR2();
-
                                             break;
                                     }
                                 } while (y != 6);
