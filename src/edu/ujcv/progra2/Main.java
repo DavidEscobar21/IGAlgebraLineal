@@ -59,8 +59,7 @@ public class Main {
                                             System.out.println("Ingrese X1 y Y1");
                                             a.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
                                             a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
-                                            System.out.println("ingrese Alpha");
-                                            double alpha = sc.nextDouble();
+                                            double alpha = leerReal(sc, "ingrese el Alpha", "Ha ingresado un caracter no valido");
                                             resul = a.escalarPorVector(alpha);
                                             System.out.println("El resultado es: ("+resul.getX()+", "+resul.getY()+")\n");
                                             break;
@@ -143,8 +142,7 @@ public class Main {
                                             a.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
                                             a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
                                             a.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
-                                            System.out.println("ingrese Alpha");
-                                            double alpha = sc.nextDouble();
+                                            double alpha = leerReal(sc, "ingrese el Alpha", "Ha ingresado un caracter no valido");
                                             resul = a.escalarPorVector(alpha);
                                             System.out.println("El resultado es: ("+resul.getX()+", "+resul.getY()+", "+resul.getZ()+")\n");
                                             break;
@@ -252,8 +250,7 @@ public class Main {
                                             a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
                                             a.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
                                             a.setW(leerReal(sc, "W1", "Ha ingresado un caracter no valido"));
-                                            System.out.println("ingrese Alpha");
-                                            double alpha = sc.nextDouble();
+                                            double alpha = leerReal(sc, "ingrese el Alpha", "Ha ingresado un caracter no valido");
                                             resul = a.escalarPorVector(alpha);
                                             System.out.println("El resultado es: ("+resul.getX()+", "+resul.getY()+", "+resul.getZ()+", "+resul.getW()+")");
                                             break;
@@ -393,8 +390,7 @@ public class Main {
                                             break;
                                         case 4:
                                             p = new IGVecR4();
-                                            System.out.println("ingrese Alpha");
-                                            double alpha = sc.nextDouble();
+                                            double alpha = leerReal(sc, "ingrese el Alpha", "Ha ingresado un caracter no valido");
                                             System.out.println("| X  Y |");
                                             System.out.println("| Z  W |");
                                             System.out.println("Ingrese X, Y, Z y W");
@@ -407,6 +403,21 @@ public class Main {
                                             System.out.println( "|"+resul.getZ()+" "+resul.getW()+"|");
                                             break;
                                         case 5:
+                                            r = new IGVecR2();
+                                            System.out.println("Ingrese X1 y Y1");
+                                            r.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                            r.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                            double angu = leerReal(sc, "ingrese el angulo", "Ha ingresado un caracter no valido");
+                                            double angulo = Math.toRadians(angu);
+                                            a = new IGVecR2();
+                                            b = new IGVecR2();
+                                            a.setX(Math.cos(angulo));
+                                            a.setY(Math.sin(angulo));
+                                            b.setX(-(Math.sin(angulo)));
+                                            b.setY(Math.cos(angulo));
+                                            g = r.productoPunto(a);
+                                            m = r.productoPunto(b);
+                                            System.out.println("El resultado es: ("+g+", "+m+")\n");
                                             break;
                                     }
                                 } while (y != 6);
@@ -418,10 +429,79 @@ public class Main {
                                     y = leerEntero(sc, "Ingrese una opcion", "Ha ingresado un caracter no valido");
                                     switch (y){
                                         case 1:
+                                            IGVecR3 r = new IGVecR3();
+                                            System.out.println("Ingrese X1, Y1 y Z1");
+                                            r.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                            r.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                            r.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                            double angu = leerReal(sc, "ingrese el angulo", "Ha ingresado un caracter no valido");
+                                            double angulo = Math.toRadians(angu);
+                                            IGVecR3 a = new IGVecR3();
+                                            a.setX(1);
+                                            a.setY(0);
+                                            a.setZ(0);
+                                            IGVecR3 b = new IGVecR3();
+                                            b.setX(0);
+                                            b.setY(Math.cos(angulo));
+                                            b.setZ(-(Math.sin(angulo)));
+                                            IGVecR3 c = new IGVecR3();
+                                            c.setX(0);
+                                            c.setY(Math.sin(angulo));
+                                            c.setZ(Math.cos(angulo));
+                                            double x1 = r.productoPunto(a);
+                                            double y1 = r.productoPunto(b);
+                                            double z1 = r.productoPunto(c);
+                                            System.out.println("El resultado es: ("+x1+", "+y1+", "+z1+")\n");
                                             break;
                                         case 2:
+                                            r = new IGVecR3();
+                                            System.out.println("Ingrese X1, Y1 y Z1");
+                                            r.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                            r.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                            r.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                            angu = leerReal(sc, "ingrese el angulo", "Ha ingresado un caracter no valido");
+                                            angulo = Math.toRadians(angu);
+                                            a = new IGVecR3();
+                                            a.setX(Math.cos(angulo));
+                                            a.setY(0);
+                                            a.setZ(-(Math.sin(angulo)));
+                                            b = new IGVecR3();
+                                            b.setX(0);
+                                            b.setY(1);
+                                            b.setZ(0);
+                                            c = new IGVecR3();
+                                            c.setX(Math.sin(angulo));
+                                            c.setY(0);
+                                            c.setZ(Math.cos(angulo));
+                                            x1 = r.productoPunto(a);
+                                            y1 = r.productoPunto(b);
+                                            z1 = r.productoPunto(c);
+                                            System.out.println("El resultado es: ("+x1+", "+y1+", "+z1+")\n");
                                             break;
                                         case 3:
+                                            r = new IGVecR3();
+                                            System.out.println("Ingrese X1, Y1 y Z1");
+                                            r.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                            r.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                            r.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                            angu = leerReal(sc, "ingrese el angulo", "Ha ingresado un caracter no valido");
+                                            angulo = Math.toRadians(angu);
+                                            a = new IGVecR3();
+                                            a.setX(Math.cos(angulo));
+                                            a.setY(Math.sin(angulo));
+                                            a.setZ(0);
+                                            b = new IGVecR3();
+                                            b.setX(-(Math.sin(angulo)));
+                                            b.setY(Math.cos(angulo));
+                                            b.setZ(0);
+                                            c = new IGVecR3();
+                                            c.setX(0);
+                                            c.setY(0);
+                                            c.setZ(1);
+                                            x1 = r.productoPunto(a);
+                                            y1 = r.productoPunto(b);
+                                            z1 = r.productoPunto(c);
+                                            System.out.println("El resultado es: ("+x1+", "+y1+", "+z1+")\n");
                                             break;
                                     }
                                 } while (y != 4);
