@@ -425,7 +425,7 @@ public class Main {
                             case 2:
                                 do {
                                     System.out.println("ingrese la oprecion que desea realizar");
-                                    System.out.println("\n1. Rotacion en X\n2. Rotacion en Y\n3. Rotacion en Z\n4. Regresar");
+                                    System.out.println("\n1. Rotacion en X\n2. Rotacion en Y\n3. Rotacion en Z\n4. Multiplicacion\n5. Columna * Matriz\n6. Suma\n7. Escalar * Matriz\n8. salir");
                                     y = leerEntero(sc, "Ingrese una opcion", "Ha ingresado un caracter no valido");
                                     switch (y){
                                         case 1:
@@ -503,21 +503,384 @@ public class Main {
                                             z1 = r.productoPunto(c);
                                             System.out.println("El resultado es: ("+x1+", "+y1+", "+z1+")\n");
                                             break;
+                                        case 4:
+                                            System.out.println("Primera matriz");
+                                            System.out.println("| X1  Y1  Z1 |");
+                                            System.out.println("| X2  Y2  Z2 |");
+                                            System.out.println("| X3  Y3  Z3 |");
+                                            a = new IGVecR3();
+                                            a.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                            a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                            a.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                            b = new IGVecR3();
+                                            b.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
+                                            b.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
+                                            b.setZ(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
+                                            c = new IGVecR3();
+                                            c.setX(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
+                                            c.setY(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+                                            c.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
+                                            System.out.println("Segunda matriz");
+                                            System.out.println("| X1  Y1  Z1 |");
+                                            System.out.println("| X2  Y2  Z2 |");
+                                            System.out.println("| X3  Y3  Z3 |");
+                                            IGVecR3 d = new IGVecR3();
+                                            IGVecR3 e = new IGVecR3();
+                                            IGVecR3 f = new IGVecR3();
+                                            d.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                            e.setX(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                            f.setX(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+
+                                            d.setY(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
+                                            e.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
+                                            f.setY(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
+
+                                            d.setZ(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
+                                            e.setZ(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+                                            f.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
+
+                                            Double X1 = a.productoPunto(d);
+                                            Double Y1 = a.productoPunto(e);
+                                            Double Z1 = a.productoPunto(f);
+                                            Double X2 = b.productoPunto(d);
+                                            Double Y2 = b.productoPunto(e);
+                                            Double Z2 = b.productoPunto(f);
+                                            Double X3 = c.productoPunto(d);
+                                            Double Y3 = c.productoPunto(e);
+                                            Double Z3 = c.productoPunto(f);
+
+                                            System.out.println( "|"+X1+" "+Y1+" "+Z1+"|");
+                                            System.out.println( "|"+X2+" "+Y2+" "+Z2+"|");
+                                            System.out.println( "|"+X3+" "+Y3+" "+Z3+"|");
+
+                                            break;
+                                        case 5:
+                                            System.out.println("Ingrese la matriz matriz");
+                                            System.out.println("| X1  Y1  Z1 |");
+                                            System.out.println("| X2  Y2  Z2 |");
+                                            System.out.println("| X3  Y3  Z3 |");
+                                            a = new IGVecR3();
+                                            b = new IGVecR3();
+                                            c = new IGVecR3();
+                                            a.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                            b.setX(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                            c.setX(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+
+                                            a.setY(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
+                                            b.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
+                                            c.setY(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
+
+                                            a.setZ(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
+                                            b.setZ(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+                                            c.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
+
+                                            IGVecR3 g = new IGVecR3();
+                                            System.out.println("Ingrese X1, Y1 y Z1");
+                                            g.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                            g.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                            g.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                            double h = g.productoPunto(a);
+                                            double m = g.productoPunto(b);
+                                            double j = g.productoPunto(c);
+                                            System.out.println("El resultado es: ("+h+", "+m+", "+j+")\n");
+                                            break;
+                                        case 6:
+                                            System.out.println("Primera matriz");
+                                            System.out.println("| X1  Y1  Z1 |");
+                                            System.out.println("| X2  Y2  Z2 |");
+                                            System.out.println("| X3  Y3  Z3 |");
+                                            a = new IGVecR3();
+                                            a.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                            a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                            a.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                            b = new IGVecR3();
+                                            b.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
+                                            b.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
+                                            b.setZ(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
+                                            c = new IGVecR3();
+                                            c.setX(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
+                                            c.setY(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+                                            c.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
+                                            System.out.println("Segunda matriz");
+                                            System.out.println("| X1  Y1  Z1 |");
+                                            System.out.println("| X2  Y2  Z2 |");
+                                            System.out.println("| X3  Y3  Z3 |");
+                                            d = new IGVecR3();
+                                            e = new IGVecR3();
+                                            f = new IGVecR3();
+                                            d.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                            d.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                            d.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+
+                                            e.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
+                                            e.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
+                                            e.setZ(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
+
+                                            f.setX(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
+                                            f.setY(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+                                            f.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
+                                            IGVecR3 X4 = a.suma(d);
+                                            IGVecR3 Y4 = b.suma(e);
+                                            IGVecR3 Z4 = c.suma(f);
+                                            System.out.println( "|"+X4.getX()+" "+X4.getY()+" "+X4.getZ()+"|");
+                                            System.out.println( "|"+Y4.getX()+" "+Y4.getY()+" "+Y4.getZ()+"|");
+                                            System.out.println( "|"+Z4.getX()+" "+Z4.getY()+" "+Z4.getZ()+"|");
+
+                                            break;
+                                        case 7:
+                                            double alpha = leerReal(sc, "ingrese el Alpha", "Ha ingresado un caracter no valido");
+                                            System.out.println("Ingrese la matriz");
+                                            System.out.println("| X1  Y1  Z1 |");
+                                            System.out.println("| X2  Y2  Z2 |");
+                                            System.out.println("| X3  Y3  Z3 |");
+                                            a = new IGVecR3();
+                                            a.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                            a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                            a.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                            b = new IGVecR3();
+                                            b.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
+                                            b.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
+                                            b.setZ(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
+                                            c = new IGVecR3();
+                                            c.setX(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
+                                            c.setY(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+                                            c.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
+                                            X4 = a.escalarPorVector(alpha);
+                                            Y4 = b.escalarPorVector(alpha);
+                                            Z4 = c.escalarPorVector(alpha);
+                                            System.out.println( "|"+X4.getX()+" "+X4.getY()+" "+X4.getZ()+"|");
+                                            System.out.println( "|"+Y4.getX()+" "+Y4.getY()+" "+Y4.getZ()+"|");
+                                            System.out.println( "|"+Z4.getX()+" "+Z4.getY()+" "+Z4.getZ()+"|");
+                                            break;
                                     }
-                                } while (y != 4);
+                                } while (y != 8);
                                 break;
                             case 3:do {
                                 System.out.println("ingrese la oprecion que desea realizar");
-                                System.out.println("\n1. Rotacion en X\n2. Rotacion en Y\n3. Rotacion en Z\n4. Rotacion en W\n5. Regresar");
+                                System.out.println("\n1. Multiplicacion\n2. Columna * Matriz\n3. Suma\n4. Escalar * Matriz\n5. Regresar");
                                 y = leerEntero(sc, "Ingrese una opcion", "Ha ingresado un caracter no valido");
                                 switch (y){
                                     case 1:
+                                        System.out.println("Primera matriz");
+                                        System.out.println("| X1  Y1  Z1  W1|");
+                                        System.out.println("| X2  Y2  Z2  W2|");
+                                        System.out.println("| X3  Y3  Z3  W3|");
+                                        System.out.println("| X4  Y4  Z4  W4|");
+                                        IGVecR4 a = new IGVecR4();
+                                        a.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                        a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                        a.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                        a.setW(leerReal(sc, "W1", "Ha ingresado un caracter no valido"));
+                                        IGVecR4 b = new IGVecR4();
+                                        b.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
+                                        b.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
+                                        b.setZ(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
+                                        b.setW(leerReal(sc, "W2", "Ha ingresado un caracter no valido"));
+                                        IGVecR4 c = new IGVecR4();
+                                        c.setX(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
+                                        c.setY(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+                                        c.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
+                                        c.setW(leerReal(sc, "W3", "Ha ingresado un caracter no valido"));
+                                        IGVecR4 d = new IGVecR4();
+                                        d.setX(leerReal(sc, "X4", "Ha ingresado un caracter no valido"));
+                                        d.setY(leerReal(sc, "Y4", "Ha ingresado un caracter no valido"));
+                                        d.setZ(leerReal(sc, "Z4", "Ha ingresado un caracter no valido"));
+                                        d.setW(leerReal(sc, "W4", "Ha ingresado un caracter no valido"));
+                                        System.out.println("Segunda matriz");
+                                        System.out.println("| X1  Y1  Z1  W1|");
+                                        System.out.println("| X2  Y2  Z2  W2|");
+                                        System.out.println("| X3  Y3  Z3  W3|");
+                                        System.out.println("| X4  Y4  Z4  W4|");
+                                        IGVecR4 e = new IGVecR4();
+                                        IGVecR4 f = new IGVecR4();
+                                        IGVecR4 g = new IGVecR4();
+                                        IGVecR4 h = new IGVecR4();
+                                        e.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                        f.setX(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                        g.setX(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                        h.setX(leerReal(sc, "W1", "Ha ingresado un caracter no valido"));
+
+                                        e.setY(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
+                                        f.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
+                                        g.setY(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
+                                        h.setY(leerReal(sc, "W2", "Ha ingresado un caracter no valido"));
+
+                                        e.setZ(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
+                                        f.setZ(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+                                        g.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
+                                        h.setZ(leerReal(sc, "W3", "Ha ingresado un caracter no valido"));
+
+                                        e.setW(leerReal(sc, "X4", "Ha ingresado un caracter no valido"));
+                                        f.setW(leerReal(sc, "Y4", "Ha ingresado un caracter no valido"));
+                                        g.setW(leerReal(sc, "Z4", "Ha ingresado un caracter no valido"));
+                                        h.setW(leerReal(sc, "W4", "Ha ingresado un caracter no valido"));
+
+                                        Double X1 = a.productoPunto(e);
+                                        Double Y1 = a.productoPunto(f);
+                                        Double Z1 = a.productoPunto(g);
+                                        Double W1 = a.productoPunto(h);
+                                        Double X2 = b.productoPunto(e);
+                                        Double Y2 = b.productoPunto(f);
+                                        Double Z2 = b.productoPunto(g);
+                                        Double W2 = b.productoPunto(h);
+                                        Double X3 = c.productoPunto(e);
+                                        Double Y3 = c.productoPunto(f);
+                                        Double Z3 = c.productoPunto(g);
+                                        Double W3 = c.productoPunto(h);
+                                        Double X4 = d.productoPunto(e);
+                                        Double Y4 = d.productoPunto(f);
+                                        Double Z4 = d.productoPunto(g);
+                                        Double W4 = d.productoPunto(h);
+
+                                        System.out.println( "|"+X1+" "+Y1+" "+Z1+" "+W1+"|");
+                                        System.out.println( "|"+X2+" "+Y2+" "+Z2+" "+W2+"|");
+                                        System.out.println( "|"+X3+" "+Y3+" "+Z3+" "+W3+"|");
+                                        System.out.println( "|"+X4+" "+Y4+" "+Z4+" "+W4+"|");
+
                                         break;
                                     case 2:
+                                        System.out.println("Ingrese la matriz");
+                                        System.out.println("| X1  Y1  Z1  W1|");
+                                        System.out.println("| X2  Y2  Z2  W2|");
+                                        System.out.println("| X3  Y3  Z3  W3|");
+                                        System.out.println("| X4  Y4  Z4  W4|");
+                                        e = new IGVecR4();
+                                        f = new IGVecR4();
+                                        g = new IGVecR4();
+                                        h = new IGVecR4();
+                                        e.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                        f.setX(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                        g.setX(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                        h.setX(leerReal(sc, "W1", "Ha ingresado un caracter no valido"));
+
+                                        e.setY(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
+                                        f.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
+                                        g.setY(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
+                                        h.setY(leerReal(sc, "W2", "Ha ingresado un caracter no valido"));
+
+                                        e.setZ(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
+                                        f.setZ(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+                                        g.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
+                                        h.setZ(leerReal(sc, "W3", "Ha ingresado un caracter no valido"));
+
+                                        e.setW(leerReal(sc, "X4", "Ha ingresado un caracter no valido"));
+                                        f.setW(leerReal(sc, "Y4", "Ha ingresado un caracter no valido"));
+                                        g.setW(leerReal(sc, "Z4", "Ha ingresado un caracter no valido"));
+                                        h.setW(leerReal(sc, "W4", "Ha ingresado un caracter no valido"));
+
+                                        IGVecR4 p = new IGVecR4();
+                                        System.out.println("Ingrese X1, Y1 y Z1");
+                                        p.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                        p.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                        p.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                        p.setW(leerReal(sc, "W1", "Ha ingresado un caracter no valido"));
+                                        double n = p.productoPunto(e);
+                                        double m = p.productoPunto(f);
+                                        double j = p.productoPunto(g);
+                                        double i = p.productoPunto(h);
+                                        System.out.println("El resultado es: ("+n+", "+m+", "+j+", "+i+")\n");
                                         break;
                                     case 3:
+                                        System.out.println("Primera matriz");
+                                        System.out.println("| X1  Y1  Z1  W1|");
+                                        System.out.println("| X2  Y2  Z2  W2|");
+                                        System.out.println("| X3  Y3  Z3  W3|");
+                                        System.out.println("| X4  Y4  Z4  W4|");
+                                        a = new IGVecR4();
+                                        a.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                        a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                        a.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                        a.setW(leerReal(sc, "W1", "Ha ingresado un caracter no valido"));
+                                        b = new IGVecR4();
+                                        b.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
+                                        b.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
+                                        b.setZ(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
+                                        b.setW(leerReal(sc, "W2", "Ha ingresado un caracter no valido"));
+                                        c = new IGVecR4();
+                                        c.setX(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
+                                        c.setY(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+                                        c.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
+                                        c.setW(leerReal(sc, "W3", "Ha ingresado un caracter no valido"));
+                                        d = new IGVecR4();
+                                        d.setX(leerReal(sc, "X4", "Ha ingresado un caracter no valido"));
+                                        d.setY(leerReal(sc, "Y4", "Ha ingresado un caracter no valido"));
+                                        d.setZ(leerReal(sc, "Z4", "Ha ingresado un caracter no valido"));
+                                        d.setW(leerReal(sc, "W4", "Ha ingresado un caracter no valido"));
+                                        System.out.println("Segunda matriz");
+                                        System.out.println("| X1  Y1  Z1  W1|");
+                                        System.out.println("| X2  Y2  Z2  W2|");
+                                        System.out.println("| X3  Y3  Z3  W3|");
+                                        System.out.println("| X4  Y4  Z4  W4|");
+                                        e = new IGVecR4();
+                                        f = new IGVecR4();
+                                        g = new IGVecR4();
+                                        h = new IGVecR4();
+                                        e.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                        e.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                        e.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                        e.setW(leerReal(sc, "W1", "Ha ingresado un caracter no valido"));
+
+                                        f.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
+                                        f.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
+                                        f.setZ(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
+                                        f.setW(leerReal(sc, "W2", "Ha ingresado un caracter no valido"));
+
+                                        g.setX(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
+                                        g.setY(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+                                        g.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
+                                        g.setW(leerReal(sc, "W3", "Ha ingresado un caracter no valido"));
+
+                                        h.setX(leerReal(sc, "X4", "Ha ingresado un caracter no valido"));
+                                        h.setY(leerReal(sc, "Y4", "Ha ingresado un caracter no valido"));
+                                        h.setZ(leerReal(sc, "Z4", "Ha ingresado un caracter no valido"));
+                                        h.setW(leerReal(sc, "W4", "Ha ingresado un caracter no valido"));
+
+                                        IGVecR4 a1 = a.suma(e);
+                                        IGVecR4 b1 = b.suma(f);
+                                        IGVecR4 c1 = c.suma(g);
+                                        IGVecR4 d1 = d.suma(h);
+                                        System.out.println( "|"+a1.getX()+" "+a1.getY()+" "+a1.getZ()+" "+a1.getW()+"|");
+                                        System.out.println( "|"+b1.getX()+" "+b1.getY()+" "+b1.getZ()+" "+b1.getW()+"|");
+                                        System.out.println( "|"+c1.getX()+" "+c1.getY()+" "+c1.getZ()+" "+c1.getW()+"|");
+                                        System.out.println( "|"+d1.getX()+" "+d1.getY()+" "+d1.getZ()+" "+d1.getW()+"|");
                                         break;
+
                                     case 4:
+                                        double alpha = leerReal(sc, "ingrese el Alpha", "Ha ingresado un caracter no valido");
+                                        System.out.println("Ingrese la matriz");
+                                        System.out.println("| X1  Y1  Z1  W1|");
+                                        System.out.println("| X2  Y2  Z2  W2|");
+                                        System.out.println("| X3  Y3  Z3  W3|");
+                                        System.out.println("| X4  Y4  Z4  W4|");
+                                        a = new IGVecR4();
+                                        a.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
+                                        a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
+                                        a.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
+                                        a.setW(leerReal(sc, "W1", "Ha ingresado un caracter no valido"));
+                                        b = new IGVecR4();
+                                        b.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
+                                        b.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
+                                        b.setZ(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
+                                        b.setW(leerReal(sc, "W2", "Ha ingresado un caracter no valido"));
+                                        c = new IGVecR4();
+                                        c.setX(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
+                                        c.setY(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+                                        c.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
+                                        c.setW(leerReal(sc, "W3", "Ha ingresado un caracter no valido"));
+                                        d = new IGVecR4();
+                                        d.setX(leerReal(sc, "X4", "Ha ingresado un caracter no valido"));
+                                        d.setY(leerReal(sc, "Y4", "Ha ingresado un caracter no valido"));
+                                        d.setZ(leerReal(sc, "Z4", "Ha ingresado un caracter no valido"));
+                                        d.setW(leerReal(sc, "W4", "Ha ingresado un caracter no valido"));
+
+                                        a1 = a.escalarPorVector(alpha);
+                                        b1 = b.escalarPorVector(alpha);
+                                        c1 = c.escalarPorVector(alpha);
+                                        d1 = d.escalarPorVector(alpha);
+                                        System.out.println( "|"+a1.getX()+" "+a1.getY()+" "+a1.getZ()+" "+a1.getW()+"|");
+                                        System.out.println( "|"+b1.getX()+" "+b1.getY()+" "+b1.getZ()+" "+b1.getW()+"|");
+                                        System.out.println( "|"+c1.getX()+" "+c1.getY()+" "+c1.getZ()+" "+c1.getW()+"|");
+                                        System.out.println( "|"+d1.getX()+" "+d1.getY()+" "+d1.getZ()+" "+d1.getW()+"|");
                                         break;
                                 }
                             }while (y!=5);
