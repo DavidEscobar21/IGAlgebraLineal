@@ -1,6 +1,5 @@
 package edu.ujcv.progra2;
 
-import edu.ujcv.progra2.matriz.IGMatR2;
 import edu.ujcv.progra2.vector.IGVecR2;
 import edu.ujcv.progra2.vector.IGVecR3;
 import edu.ujcv.progra2.vector.IGVecR4;
@@ -356,9 +355,10 @@ public class Main {
                                             a = new IGVecR2();
                                             b = new IGVecR2();
                                             a.setX(leerReal(sc, "X", "Ha ingresado un caracter no valido"));
+                                            a.setY(leerReal(sc, "W", "Ha ingresado un caracter no valido"));
                                             b.setX(leerReal(sc, "Y", "Ha ingresado un caracter no valido"));
                                             b.setY(leerReal(sc, "Z", "Ha ingresado un caracter no valido"));
-                                            a.setY(leerReal(sc, "W", "Ha ingresado un caracter no valido"));
+
                                             IGVecR2 r= new IGVecR2();
                                             System.out.println("Ingrese X1 y Y1");
                                             r.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
@@ -443,10 +443,10 @@ public class Main {
                                             IGVecR3 b = new IGVecR3();
                                             b.setX(0);
                                             b.setY(Math.cos(angulo));
-                                            b.setZ(-(Math.sin(angulo)));
+                                            b.setZ(Math.sin(angulo));
                                             IGVecR3 c = new IGVecR3();
                                             c.setX(0);
-                                            c.setY(Math.sin(angulo));
+                                            c.setY(-Math.sin(angulo));
                                             c.setZ(Math.cos(angulo));
                                             double x1 = r.productoPunto(a);
                                             double y1 = r.productoPunto(b);
